@@ -1,5 +1,6 @@
 package com.example.h2zoo;
 
+import com.example.h2zoo.repository.ReptileRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class H2ZooApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(H2ZooApplication.class, args);
+
+		ConfigurableApplicationContext configurableApplicationContext =
+				SpringApplication.run(H2ZooApplication.class, args);
+		ReptileRepository reptileRepository =
+				configurableApplicationContext.getBean(ReptileRepository.class);
 	}
 
 }
