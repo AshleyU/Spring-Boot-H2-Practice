@@ -16,7 +16,7 @@ public class Reptile {
     private final String color;
     private final String dietType;
 
-    public Reptile() {
+    public Reptile(String name, String species, String color, String dietType) {
         this.name = name;
         this.species = species;
         this.color = color;
